@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">our team</h1>
+    <div id="container"></div>
+
+    <div></div>
+
+    <script>
+      const con = document.getElementById("container");
+      const team = [
+        { name: "mike", age: "34", Image: "download.jpg", role: "graphic desighner" },
+        { name: "william", age: "93", image: "download.jpg", role: "youtuber" },
+        { name: "jacky", age: "73", image: "download.jpg", role: "hacker" },
+        { name: "kingo", age: "54", image: "download.jpg", role: "developer" },
+      ];
+      for (a = 0; a < team.length; a++) {
+        
+        const re = document.createElement("div");
+        re.style.width = "200px";
+        re.style.backgroundColor = "";
+        re.style.color = "white";
+        re.style.borderRadius = "10px";
+        re.style.textAlign = "center";
+
+        re.innerHTML = `
+    <img src="${member.image}" style="width:100px; height:100px; border-radius:50%; border: 2px solid blue; margin-bottom:10px;">
+    <h2 style="margin:5px 0;">${name}</h2>
+    <p style="margin:5px 0;">${role}</p>`;
+
+        con.append(re);
+      }
+    </script>
+  </body>
+</html>
